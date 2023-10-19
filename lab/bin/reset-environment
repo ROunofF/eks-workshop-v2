@@ -10,6 +10,7 @@ module=$1
 repository_path="/eks-workshop/repository"
 manifests_path="/eks-workshop/manifests"
 base_path="$manifests_path/base-application"
+log_path="/eks-workshop/logs
 
 set -Eeuo pipefail
 
