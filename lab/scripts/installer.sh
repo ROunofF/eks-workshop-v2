@@ -117,7 +117,7 @@ if [ ! -z "$REPOSITORY_REF" ]; then
 #!/bin/bash
 set -e
 ts=$(date +%s)
-curl -fsSL https://raw.githubusercontent.com/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/$REPOSITORY_REF/lab/bin/reset-environment | bash -s -- \$1 2>&1 | tee /eks-workshop/logs/action-$ts.log
+curl -fsSL https://raw.githubusercontent.com/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/$REPOSITORY_REF/lab/bin/reset-environment | bash -s -- \$1 2>&1 | tee /eks-workshop/logs/action-\$ts.log
 EOT
   chmod +x /usr/local/bin/reset-environment
   cat << EOT > /usr/local/bin/delete-environment
