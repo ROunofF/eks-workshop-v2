@@ -31,7 +31,7 @@ kind: EC2NodeClass
 metadata:
   name: default
 spec:
-  amiFamily: AL2 # Amazon Linux 2
+  amiFamily: AL2023 # Amazon Linux 2023
   role: "${KARPENTER_ROLE}"
   subnetSelectorTerms:
     - tags:
