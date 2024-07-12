@@ -545,6 +545,7 @@ module "eks_blueprints_addons" {
 
   enable_aws_load_balancer_controller = true
   aws_load_balancer_controller = {
+    load_balancer_controller_chart_version = var.load_balancer_controller_chart_version
     wait = true
   }
 

@@ -40,3 +40,10 @@ variable "kubecost_chart_version" {
   # renovate-helm: depName=cost-analyzer registryUrl=https://kubecost.github.io/cost-analyzer
   default = "1.106.3"
 }
+
+variable "load_balancer_controller_chart_version" {
+  description = "The chart version of aws-load-balancer-controller to use"
+  type        = string
+  # renovate-helm: depName=aws-load-balancer-controller
+  default = "1.8.1"
+}
