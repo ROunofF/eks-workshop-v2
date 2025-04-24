@@ -9,7 +9,7 @@ kubectl_version='1.31.7'
 helm_version='3.17.2'
 
 # renovate: depName=eksctl-io/eksctl
-eksctl_version='0.205.0'
+eksctl_version='0.207.0'
 
 kubeseal_version='0.18.4'
 
@@ -20,10 +20,10 @@ yq_version='4.45.1'
 flux_version='2.5.1'
 
 # renovate: depName=argoproj/argo-cd
-argocd_version='2.14.8'
+argocd_version='2.14.9'
 
 # renovate: depName=hashicorp/terraform
-terraform_version='1.9.8'
+terraform_version='1.11.3'
 
 # renovate: depName=aws/amazon-ec2-instance-selector
 ec2_instance_selector_version='2.4.1'
