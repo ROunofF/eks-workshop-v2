@@ -44,5 +44,8 @@
       "markdownlint-cli2"
     ]
   },
+  "resolutions": {
+    "markdown-link-extractor": "4.0.2"
+  },
   "packageManager": "yarn@4.12.0"
 }
