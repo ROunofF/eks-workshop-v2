@@ -10,5 +10,8 @@ outfile=$(mktemp)
 
 bash $SCRIPT_DIR/build-ide-cfn.sh $outfile
 
+source $SCRIPT_DIR/lib/resolve-source-ip.sh
+
 aws cloudformation deploy --stack-name "$EKS_CLUSTER_NAME-ide" \
-  --capabilities CAPABILITY_NAMED_IAM --disable-rollback --template-file $outfile
+  --capabilities CAPABILITY_NAMED_IAM --disable-rollback --template-file $outfile \
+  --parameter-overrides InboundCIDR="$INBOUND_CIDRS"
