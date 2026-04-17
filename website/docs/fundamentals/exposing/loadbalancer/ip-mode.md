@@ -43,7 +43,7 @@ Service/ui-nlb
 Apply the manifest with kustomize:
 
 ```bash
-$ kubectl apply -k ~/environment/eks-workshop/modules/exposing/load-balancer/ip-mode
+$ kubectl kustomize ~/environment/eks-workshop/modules/exposing/load-balancer/ip-mode | envsubst | kubectl apply -f -
 ```
 
 It will take a few minutes for the configuration of the load balancer to be updated. Run the following command to ensure the annotation is updated:
