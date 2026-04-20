@@ -8,7 +8,7 @@ set -Eeuo pipefail
 set -u
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-export USE_CURRENT_USER=1;
+export USE_CURRENT_USER=${USE_CURRENT_USER:-1};
 source $SCRIPT_DIR/lib/common-env.sh
 
 cluster_exists=0
