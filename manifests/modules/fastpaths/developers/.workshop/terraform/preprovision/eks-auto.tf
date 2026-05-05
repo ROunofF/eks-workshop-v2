@@ -15,7 +15,7 @@ data "aws_availability_zones" "available" {
 
 data "aws_region" "current" {}
 
-# Helm provider configuration for EKS
+# Provider configuration for EKS Auto Mode
 terraform {
   required_version = ">= 1.3"
 
@@ -24,6 +24,11 @@ terraform {
       source                = "hashicorp/helm"
       version               = "2.17.0"
       configuration_aliases = [helm.auto_mode]
+    }
+    kubernetes = {
+      source                = "hashicorp/kubernetes"
+      version               = "2.38.0"
+      configuration_aliases = [kubernetes.auto_mode]
     }
   }
 }
