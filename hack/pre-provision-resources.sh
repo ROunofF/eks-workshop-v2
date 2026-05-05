@@ -72,4 +72,4 @@ if [[ "$action" != 'plan' ]]; then
   approve_args='--auto-approve'
 fi
 
-terraform -chdir="${conf_dir}" "$action" -var="eks_cluster_id=$EKS_CLUSTER_NAME" $approve_args
+terraform -chdir="${conf_dir}" "$action" -var="eks_cluster_id=$EKS_CLUSTER_NAME" -var="eks_cluster_auto_id=$EKS_CLUSTER_AUTO_NAME" $approve_args
