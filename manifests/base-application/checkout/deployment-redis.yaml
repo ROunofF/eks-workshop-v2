@@ -25,6 +25,12 @@ spec:
         - name: redis
           image: "public.ecr.aws/docker/library/redis:6.0-alpine"
           imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: 64Mi
+            requests:
+              cpu: 50m
+              memory: 64Mi
           ports:
             - name: redis
               containerPort: 6379

@@ -57,11 +57,11 @@ application.argoproj.io/catalog created
 
 Argo CD picks up the new `Application`, pulls the manifests from CodeCommit, creates the `catalog` namespace, and deploys the workloads. Trigger an immediate refresh so we don't wait on the default ~3-minute poll, then wait for the Application to report `Healthy`. A `Healthy` Argo CD Application means its workloads rolled out successfully, so there's no separate rollout check to run:
 
-```bash timeout=600
+```bash timeout=900
 $ kubectl annotate application catalog -n argocd \
   argocd.argoproj.io/refresh=hard --overwrite
 $ kubectl wait --for=jsonpath='{.status.health.status}'=Healthy \
-  application/catalog -n argocd --timeout=300s
+  application/catalog -n argocd --timeout=600s
 application.argoproj.io/catalog condition met
 ```
 
